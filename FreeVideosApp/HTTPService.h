@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef void (^onComplete) (NSDictionary * __nullable err);
+
+
 @interface HTTPService : NSObject
 
 + (id) instance ;
 
--(void) getTutorials;
+-(void) getTutorials:(nullable onComplete) completionHandler;
 
 @end

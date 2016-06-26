@@ -23,7 +23,7 @@
     return sharedInstance;
 }
 
--(void) getTutorials{
+-(void) getTutorials:(nullable onComplete) completionHandler {
     
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%s%s", URL_BASE, URL_TUTORIALS]];
     NSURLSession *session = [NSURLSession sharedSession];
